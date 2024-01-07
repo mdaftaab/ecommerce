@@ -6,7 +6,15 @@ const userModel = require("./users");
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors());
+// let's tackle cors
+const corsOptions = {
+    origin: "http://localhost:5173",
+    methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
+    credentials: true,
+};
+
+app.use(cors(corsOptions));
+
 app.use(express.json());
 
 app.get('/', (req, res) => {
