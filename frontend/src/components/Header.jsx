@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import { logout } from '../redux/slices/authSlice';
 import {
     Button,
     Container,
@@ -8,11 +10,19 @@ import {
 } from "react-bootstrap";
 
 const Header = () => {
+
+    const dispatch = useDispatch();
+
+    const handleLogout = () => {
+        dispatch(logout());
+    };
+
+
     return (
         <>
             <Navbar expand="lg" className="bg-body-tertiary">
                 <Container fluid>
-                    <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+                    <Navbar.Brand to="/">Navbar scroll</Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav
@@ -20,8 +30,14 @@ const Header = () => {
                             style={{ maxHeight: "100px" }}
                             navbarScroll
                         >
-                            <Link href="/">Home</Link>
-                            <Link href="/login">Login</Link>
+                            <Link to="/">Home</Link>
+
+                            <Link to="/login">Login</Link>
+                            <Link to="/register">Register</Link>
+
+                            <Link to="/profile">Profile</Link>
+
+                            <button onClick={handleLogout}>Logout</button>
 
                         </Nav>
                         <Form className="d-flex">
