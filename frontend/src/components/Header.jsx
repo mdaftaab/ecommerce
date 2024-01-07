@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import { useDispatch } from 'react-redux';
-import { logout } from '../redux/slices/authSlice';
 import {
     Button,
     Container,
@@ -11,18 +9,20 @@ import {
 
 const Header = () => {
 
-    const dispatch = useDispatch();
-
-    const handleLogout = () => {
-        dispatch(logout());
-    };
-
-
     return (
         <>
             <Navbar expand="lg" className="bg-body-tertiary">
                 <Container fluid>
-                    <Navbar.Brand to="/">Navbar scroll</Navbar.Brand>
+                    <Navbar.Brand to="/">Logo</Navbar.Brand>
+                    <Form className="d-flex">
+                        <Form.Control
+                            type="search"
+                            placeholder="Search"
+                            className="me-2"
+                            aria-label="Search"
+                        />
+                        <Button variant="outline-success">Search</Button>
+                    </Form>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav
@@ -37,18 +37,10 @@ const Header = () => {
 
                             <Link to="/profile">Profile</Link>
 
-                            <button onClick={handleLogout}>Logout</button>
+                            <button className="btn btn-danger">Logout</button>
 
                         </Nav>
-                        <Form className="d-flex">
-                            <Form.Control
-                                type="search"
-                                placeholder="Search"
-                                className="me-2"
-                                aria-label="Search"
-                            />
-                            <Button variant="outline-success">Search</Button>
-                        </Form>
+                        
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
