@@ -1,6 +1,10 @@
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 
 const Register = () => {
+
+    
+
+
     return (
         <div className="main">
             <Container>
