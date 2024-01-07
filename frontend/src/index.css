@@ -1,0 +1,8 @@
+.main{
+    min-height: 84vh;
+    width: 100%;
+  }
+  .nav-menu{
+    flex-direction: row;
+    width: 100%;
+  }

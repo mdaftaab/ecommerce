@@ -2,7 +2,7 @@ import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 
 const Register = () => {
     return (
-        <>
+        <div className="main">
             <Container>
                 <Row>
                     <Col lg={8} className='mx-auto pt-3'><h2>Register Form</h2></Col>
@@ -33,7 +33,7 @@ const Register = () => {
                     </Col>
                 </Row>
             </Container>
-        </>
+        </div>
     )
 }
 

@@ -2,7 +2,7 @@ import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 
 const Login = () => {
     return (
-        <>
+        <div className="main">
             <Container>
                 <Row>
                     <Col lg={8} className='mx-auto pt-3'><h2>Login Form</h2></Col>
@@ -25,7 +25,7 @@ const Login = () => {
                     </Col>
                 </Row>
             </Container>
-        </>
+        </div>
     )
 }
 
