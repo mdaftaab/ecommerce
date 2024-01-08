@@ -28,7 +28,7 @@ const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         console.log(user);
-        const response = await fetch(`http://localhost:5000/api/auth/register`, {
+        const response = await fetch(`https://jubilant-system-7pr46rv5qr9frw64-5000.app.github.dev/create`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -39,7 +39,6 @@ const Register = () => {
 
         if (response.ok) {
             // stored the token in localhost
-
             setUser({ username: "", email: "", phone: "", password: "" });
             navigate("/");
         } else (e)(
