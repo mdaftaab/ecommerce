@@ -7,14 +7,10 @@ const jwt = require('jsonwebtoken');
 const home = async (req, res) => {
   // Implement home page here
   try {
-    res
-    .status(200)
-    .send("Home page")
+    res.status(200).json({message: "Welcome to home page"})
 
   } catch (error) {
-    res
-    .status(400)
-    .send("Home Page not found")
+    res.status(400).send("Home Page not found")
     console.log(error);
   }
 
@@ -24,14 +20,10 @@ const home = async (req, res) => {
 const register = async (req, res) => {
   // Implement user registration here
   try {
-    res
-    .status(200)
-    .send("Register page")
+    res.status(200).json({message: "Welcome to register page"})
 
   } catch (error) {
-    res
-    .status(400)
-    .send("Register Page not found")
+    res.status(400).send("Register Page not found")
     console.log(error);
   }
 
@@ -41,14 +33,10 @@ const register = async (req, res) => {
 const login = async (req, res) => {
   // Implement user logic here
   try {
-    res
-    .status(200)
-    .send("Login page")
+    res.status(200).json({message: "Welcome to login page"})
 
   } catch (error) {
-    res
-    .status(400)
-    .send("Login Page not found")
+    res.status(400).send("Login Page not found")
     console.log(error);
   }
 };
