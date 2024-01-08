@@ -11,8 +11,7 @@ const router = require("./routes/auth");
 // Routes
 app.use('/api/auth', router);
 
-// Middleware
-// let's tackle cors
+// Middleware = let's tackle cors
 const corsOptions = {
     origin: "http://localhost:5173",
     methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
@@ -21,28 +20,6 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 app.use(express.json());
-
-
-// app.get('/create', async function (req, res) {
-//     const createdUser = await userModel.create({
-//         name: "Alam",
-//         email: "alam@gmail.com",
-//         password: "36234466899",
-//     });
-//     res.send(createdUser);
-// });
-
-// app.get("/allusers", async function (req, res) {
-//     let allUsers = await userModel.find();
-//     res.send(allUsers);
-// })
-
-// app.get("/user", async function (req, res) {
-//     let allUsers = await userModel.findOne({
-//         name: "Alam"
-//     });
-//     res.send(allUsers);
-// })
 
 connectDb().then(() => {
     // Start server
