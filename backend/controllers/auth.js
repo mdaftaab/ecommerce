@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 // Home Page
 const home = async (req, res) => {
   try {
-    res.status(200).json({ message: "Welcome to home page" })
+    res.status(200).send("Welcome to home page")
 
   } catch (error) {
     res.status(400).send("Home Page not found")

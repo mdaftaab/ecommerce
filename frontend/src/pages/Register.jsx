@@ -28,7 +28,7 @@ const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         console.log(user);
-        const response = await fetch(`https://jubilant-system-7pr46rv5qr9frw64-5000.app.github.dev/create`, {
+        const response = await fetch(`https://jubilant-system-7pr46rv5qr9frw64-5000.app.github.dev`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
